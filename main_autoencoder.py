@@ -42,7 +42,7 @@ def main():
     # Read the dataset, process it for noise = 0
 
     #@title Dataset Reading and Processing
-    Noise = 0 #@param {type:"slider", min:0, max:1, step:0.1}
+    Noise = 0.8 #@param {type:"slider", min:0, max:1, step:0.1}
     (x_train, _), (x_test, _) = K.datasets.mnist.load_data()
 
     x_train = x_train / 255.
@@ -94,16 +94,16 @@ def main():
     # We have built Convolutional Autoencoder. That is both Encoder and Decoder are buit using Convolutional layers. Below you need to select 
 
     #@title Select Filters for Encoder & Decoder
-    filter_encoder_0 = 16 #@param {type:"slider", min:8, max:256, step:2}
+    filter_encoder_0 = 64 #@param {type:"slider", min:8, max:256, step:2}
     filter_encoder_1 = 32 #@param {type:"slider", min:8, max:256, step:2}
-    filter_encoder_2 = 64 #@param {type:"slider", min:8, max:256, step:2}
+    filter_encoder_2 = 16 #@param {type:"slider", min:8, max:256, step:2}
 
     filters_en = [filter_encoder_0,filter_encoder_1,filter_encoder_2]
 
 
-    filter_decoder_0 = 64 #@param {type:"slider", min:8, max:256, step:2}
+    filter_decoder_0 = 16 #@param {type:"slider", min:8, max:256, step:2}
     filter_decoder_1 = 32 #@param {type:"slider", min:8, max:256, step:2}
-    filter_decoder_2 = 16 #@param {type:"slider", min:8, max:256, step:2}
+    filter_decoder_2 = 64 #@param {type:"slider", min:8, max:256, step:2}
 
     filters_de = [filter_decoder_0,filter_decoder_1,filter_decoder_2]
 
